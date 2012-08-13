@@ -1,0 +1,800 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2706F30F14FD948600B56773 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2706F30E14FD948600B56773 /* MapKit.framework */; };
+		275B4EBC14FD511900EA2661 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF576714FD501500E58F24 /* SenTestingKit.framework */; };
+		275B4EBD14FD511900EA2661 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF574914FD501400E58F24 /* UIKit.framework */; };
+		275B4EBE14FD511900EA2661 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF574B14FD501400E58F24 /* Foundation.framework */; };
+		275B4EC414FD511900EA2661 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 275B4EC214FD511900EA2661 /* InfoPlist.strings */; };
+		275B4EC714FD511900EA2661 /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 275B4EC614FD511900EA2661 /* LocationTests.m */; };
+		2767A2FB14FEA46D00132B45 /* LocationGHTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2767A2FA14FEA46D00132B45 /* LocationGHTests.m */; };
+		27DE87F514FD5377005FE50F /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DE87F414FD5377005FE50F /* Location.m */; };
+		27DE87F614FD5377005FE50F /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DE87F414FD5377005FE50F /* Location.m */; };
+		27DE87FA14FD5465005FE50F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DE87F914FD5465005FE50F /* CoreLocation.framework */; };
+		27DE87FB14FD5470005FE50F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DE87F914FD5465005FE50F /* CoreLocation.framework */; };
+		27DF574A14FD501400E58F24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF574914FD501400E58F24 /* UIKit.framework */; };
+		27DF574C14FD501400E58F24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF574B14FD501400E58F24 /* Foundation.framework */; };
+		27DF574E14FD501400E58F24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF574D14FD501400E58F24 /* CoreGraphics.framework */; };
+		27DF575414FD501400E58F24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27DF575214FD501400E58F24 /* InfoPlist.strings */; };
+		27DF575614FD501400E58F24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF575514FD501400E58F24 /* main.m */; };
+		27DF575A14FD501500E58F24 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF575914FD501500E58F24 /* AppDelegate.m */; };
+		27DF575D14FD501500E58F24 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27DF575B14FD501500E58F24 /* MainStoryboard.storyboard */; };
+		27DF576014FD501500E58F24 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF575F14FD501500E58F24 /* ViewController.m */; };
+		27DF576814FD501500E58F24 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF576714FD501500E58F24 /* SenTestingKit.framework */; };
+		27DF576914FD501500E58F24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF574914FD501400E58F24 /* UIKit.framework */; };
+		27DF576A14FD501500E58F24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF574B14FD501400E58F24 /* Foundation.framework */; };
+		27DF577214FD501500E58F24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27DF577014FD501500E58F24 /* InfoPlist.strings */; };
+		27DF577514FD501500E58F24 /* ApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DF577414FD501500E58F24 /* ApplicationTests.m */; };
+		27EF952E14FDAAD5003E3367 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF574914FD501400E58F24 /* UIKit.framework */; };
+		27EF952F14FDAAD5003E3367 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF574B14FD501400E58F24 /* Foundation.framework */; };
+		27EF953014FDAAD5003E3367 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF574D14FD501400E58F24 /* CoreGraphics.framework */; };
+		27EF953614FDAAD5003E3367 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27EF953414FDAAD5003E3367 /* InfoPlist.strings */; };
+		27EF953814FDAAD5003E3367 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EF953714FDAAD5003E3367 /* main.m */; };
+		27EF954214FDAB2A003E3367 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EF954114FDAB2A003E3367 /* GHUnitIOS.framework */; };
+		27EF954314FDAC8E003E3367 /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 275B4EC614FD511900EA2661 /* LocationTests.m */; };
+		27EF954414FDACA6003E3367 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF576714FD501500E58F24 /* SenTestingKit.framework */; };
+		27EF954514FDACB3003E3367 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DE87F914FD5465005FE50F /* CoreLocation.framework */; };
+		27EF954614FDACC2003E3367 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DE87F414FD5377005FE50F /* Location.m */; };
+		AC49E5B515D8D3B500480FBB /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC49E5B415D8D3B500480FBB /* libprofile_rt.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2706F31D14FD9F5200B56773 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27DF573C14FD501400E58F24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 275B4EBA14FD511900EA2661;
+			remoteInfo = LogicTests;
+		};
+		27DF576B14FD501500E58F24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27DF573C14FD501400E58F24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27DF574414FD501400E58F24;
+			remoteInfo = WhatsMySpeed;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2706F30E14FD948600B56773 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		275B4EBB14FD511900EA2661 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		275B4EC114FD511900EA2661 /* LogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LogicTests-Info.plist"; sourceTree = "<group>"; };
+		275B4EC314FD511900EA2661 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		275B4EC514FD511900EA2661 /* LocationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationTests.h; sourceTree = "<group>"; };
+		275B4EC614FD511900EA2661 /* LocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTests.m; sourceTree = "<group>"; };
+		275B4EC814FD511900EA2661 /* LogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LogicTests-Prefix.pch"; sourceTree = "<group>"; };
+		2767A2FA14FEA46D00132B45 /* LocationGHTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationGHTests.m; sourceTree = "<group>"; };
+		27DE87F314FD5377005FE50F /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		27DE87F414FD5377005FE50F /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		27DE87F914FD5465005FE50F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		27DF574514FD501400E58F24 /* WhatsMySpeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsMySpeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27DF574914FD501400E58F24 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		27DF574B14FD501400E58F24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		27DF574D14FD501400E58F24 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		27DF575114FD501400E58F24 /* WhatsMySpeed-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WhatsMySpeed-Info.plist"; sourceTree = "<group>"; };
+		27DF575314FD501400E58F24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27DF575514FD501400E58F24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27DF575714FD501500E58F24 /* WhatsMySpeed-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhatsMySpeed-Prefix.pch"; sourceTree = "<group>"; };
+		27DF575814FD501500E58F24 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		27DF575914FD501500E58F24 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		27DF575C14FD501500E58F24 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		27DF575E14FD501500E58F24 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		27DF575F14FD501500E58F24 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		27DF576614FD501500E58F24 /* WhatsMySpeedTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatsMySpeedTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27DF576714FD501500E58F24 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		27DF576F14FD501500E58F24 /* WhatsMySpeedTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WhatsMySpeedTests-Info.plist"; sourceTree = "<group>"; };
+		27DF577114FD501500E58F24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27DF577314FD501500E58F24 /* ApplicationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationTests.h; sourceTree = "<group>"; };
+		27DF577414FD501500E58F24 /* ApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationTests.m; sourceTree = "<group>"; };
+		27EF952C14FDAAD5003E3367 /* GHUnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHUnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27EF953314FDAAD5003E3367 /* GHUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GHUnitTests-Info.plist"; sourceTree = "<group>"; };
+		27EF953514FDAAD5003E3367 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27EF953714FDAAD5003E3367 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27EF953914FDAAD5003E3367 /* GHUnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GHUnitTests-Prefix.pch"; sourceTree = "<group>"; };
+		27EF954114FDAB2A003E3367 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
+		AC49E5B415D8D3B500480FBB /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = ../../../../libprofile_rt.dylib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		275B4EB714FD511900EA2661 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275B4EBC14FD511900EA2661 /* SenTestingKit.framework in Frameworks */,
+				275B4EBD14FD511900EA2661 /* UIKit.framework in Frameworks */,
+				275B4EBE14FD511900EA2661 /* Foundation.framework in Frameworks */,
+				27DE87FB14FD5470005FE50F /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27DF574214FD501400E58F24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2706F30F14FD948600B56773 /* MapKit.framework in Frameworks */,
+				27DE87FA14FD5465005FE50F /* CoreLocation.framework in Frameworks */,
+				27DF574A14FD501400E58F24 /* UIKit.framework in Frameworks */,
+				27DF574C14FD501400E58F24 /* Foundation.framework in Frameworks */,
+				27DF574E14FD501400E58F24 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27DF576214FD501500E58F24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27DF576814FD501500E58F24 /* SenTestingKit.framework in Frameworks */,
+				27DF576914FD501500E58F24 /* UIKit.framework in Frameworks */,
+				27DF576A14FD501500E58F24 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27EF952914FDAAD5003E3367 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC49E5B515D8D3B500480FBB /* libprofile_rt.dylib in Frameworks */,
+				27EF952E14FDAAD5003E3367 /* UIKit.framework in Frameworks */,
+				27EF952F14FDAAD5003E3367 /* Foundation.framework in Frameworks */,
+				27EF953014FDAAD5003E3367 /* CoreGraphics.framework in Frameworks */,
+				27EF954214FDAB2A003E3367 /* GHUnitIOS.framework in Frameworks */,
+				27EF954414FDACA6003E3367 /* SenTestingKit.framework in Frameworks */,
+				27EF954514FDACB3003E3367 /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		275B4EBF14FD511900EA2661 /* LogicTests */ = {
+			isa = PBXGroup;
+			children = (
+				275B4EC514FD511900EA2661 /* LocationTests.h */,
+				275B4EC614FD511900EA2661 /* LocationTests.m */,
+				275B4EC014FD511900EA2661 /* Supporting Files */,
+			);
+			path = LogicTests;
+			sourceTree = "<group>";
+		};
+		275B4EC014FD511900EA2661 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				275B4EC114FD511900EA2661 /* LogicTests-Info.plist */,
+				275B4EC214FD511900EA2661 /* InfoPlist.strings */,
+				275B4EC814FD511900EA2661 /* LogicTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27DE87F814FD5388005FE50F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27DE87F314FD5377005FE50F /* Location.h */,
+				27DE87F414FD5377005FE50F /* Location.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		27DF573A14FD501400E58F24 = {
+			isa = PBXGroup;
+			children = (
+				AC49E5B415D8D3B500480FBB /* libprofile_rt.dylib */,
+				27DF574F14FD501400E58F24 /* WhatsMySpeed */,
+				27DF576D14FD501500E58F24 /* ApplicationTests */,
+				275B4EBF14FD511900EA2661 /* LogicTests */,
+				27EF953114FDAAD5003E3367 /* GHUnitTests */,
+				27DF574814FD501400E58F24 /* Frameworks */,
+				27DF574614FD501400E58F24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27DF574614FD501400E58F24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27DF574514FD501400E58F24 /* WhatsMySpeed.app */,
+				27DF576614FD501500E58F24 /* WhatsMySpeedTests.octest */,
+				275B4EBB14FD511900EA2661 /* LogicTests.octest */,
+				27EF952C14FDAAD5003E3367 /* GHUnitTests.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27DF574814FD501400E58F24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27EF954114FDAB2A003E3367 /* GHUnitIOS.framework */,
+				2706F30E14FD948600B56773 /* MapKit.framework */,
+				27DE87F914FD5465005FE50F /* CoreLocation.framework */,
+				27DF574914FD501400E58F24 /* UIKit.framework */,
+				27DF574B14FD501400E58F24 /* Foundation.framework */,
+				27DF574D14FD501400E58F24 /* CoreGraphics.framework */,
+				27DF576714FD501500E58F24 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27DF574F14FD501400E58F24 /* WhatsMySpeed */ = {
+			isa = PBXGroup;
+			children = (
+				27DE87F814FD5388005FE50F /* Models */,
+				27DF575814FD501500E58F24 /* AppDelegate.h */,
+				27DF575914FD501500E58F24 /* AppDelegate.m */,
+				27DF575B14FD501500E58F24 /* MainStoryboard.storyboard */,
+				27DF575E14FD501500E58F24 /* ViewController.h */,
+				27DF575F14FD501500E58F24 /* ViewController.m */,
+				27DF575014FD501400E58F24 /* Supporting Files */,
+			);
+			path = WhatsMySpeed;
+			sourceTree = "<group>";
+		};
+		27DF575014FD501400E58F24 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27DF575114FD501400E58F24 /* WhatsMySpeed-Info.plist */,
+				27DF575214FD501400E58F24 /* InfoPlist.strings */,
+				27DF575514FD501400E58F24 /* main.m */,
+				27DF575714FD501500E58F24 /* WhatsMySpeed-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27DF576D14FD501500E58F24 /* ApplicationTests */ = {
+			isa = PBXGroup;
+			children = (
+				27DF577314FD501500E58F24 /* ApplicationTests.h */,
+				27DF577414FD501500E58F24 /* ApplicationTests.m */,
+				27DF576E14FD501500E58F24 /* Supporting Files */,
+			);
+			name = ApplicationTests;
+			path = WhatsMySpeedTests;
+			sourceTree = "<group>";
+		};
+		27DF576E14FD501500E58F24 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27DF576F14FD501500E58F24 /* WhatsMySpeedTests-Info.plist */,
+				27DF577014FD501500E58F24 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27EF953114FDAAD5003E3367 /* GHUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				27EF953214FDAAD5003E3367 /* Supporting Files */,
+				2767A2FA14FEA46D00132B45 /* LocationGHTests.m */,
+			);
+			path = GHUnitTests;
+			sourceTree = "<group>";
+		};
+		27EF953214FDAAD5003E3367 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27EF953314FDAAD5003E3367 /* GHUnitTests-Info.plist */,
+				27EF953414FDAAD5003E3367 /* InfoPlist.strings */,
+				27EF953714FDAAD5003E3367 /* main.m */,
+				27EF953914FDAAD5003E3367 /* GHUnitTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		275B4EBA14FD511900EA2661 /* LogicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 275B4ECB14FD511900EA2661 /* Build configuration list for PBXNativeTarget "LogicTests" */;
+			buildPhases = (
+				275B4EB614FD511900EA2661 /* Sources */,
+				275B4EB714FD511900EA2661 /* Frameworks */,
+				275B4EB814FD511900EA2661 /* Resources */,
+				275B4EB914FD511900EA2661 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LogicTests;
+			productName = LogicTests;
+			productReference = 275B4EBB14FD511900EA2661 /* LogicTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		27DF574414FD501400E58F24 /* WhatsMySpeed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27DF577814FD501500E58F24 /* Build configuration list for PBXNativeTarget "WhatsMySpeed" */;
+			buildPhases = (
+				27DF574114FD501400E58F24 /* Sources */,
+				27DF574214FD501400E58F24 /* Frameworks */,
+				27DF574314FD501400E58F24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2706F31E14FD9F5200B56773 /* PBXTargetDependency */,
+			);
+			name = WhatsMySpeed;
+			productName = WhatsMySpeed;
+			productReference = 27DF574514FD501400E58F24 /* WhatsMySpeed.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27DF576514FD501500E58F24 /* WhatsMySpeedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27DF577B14FD501500E58F24 /* Build configuration list for PBXNativeTarget "WhatsMySpeedTests" */;
+			buildPhases = (
+				27DF576114FD501500E58F24 /* Sources */,
+				27DF576214FD501500E58F24 /* Frameworks */,
+				27DF576314FD501500E58F24 /* Resources */,
+				27DF576414FD501500E58F24 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27DF576C14FD501500E58F24 /* PBXTargetDependency */,
+			);
+			name = WhatsMySpeedTests;
+			productName = WhatsMySpeedTests;
+			productReference = 27DF576614FD501500E58F24 /* WhatsMySpeedTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		27EF952B14FDAAD5003E3367 /* GHUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27EF953F14FDAAD5003E3367 /* Build configuration list for PBXNativeTarget "GHUnitTests" */;
+			buildPhases = (
+				27EF952814FDAAD5003E3367 /* Sources */,
+				27EF952914FDAAD5003E3367 /* Frameworks */,
+				27EF952A14FDAAD5003E3367 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GHUnitTests;
+			productName = GHUnitTests;
+			productReference = 27EF952C14FDAAD5003E3367 /* GHUnitTests.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27DF573C14FD501400E58F24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = lynda.com;
+			};
+			buildConfigurationList = 27DF573F14FD501400E58F24 /* Build configuration list for PBXProject "WhatsMySpeed" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 27DF573A14FD501400E58F24;
+			productRefGroup = 27DF574614FD501400E58F24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27DF574414FD501400E58F24 /* WhatsMySpeed */,
+				27DF576514FD501500E58F24 /* WhatsMySpeedTests */,
+				275B4EBA14FD511900EA2661 /* LogicTests */,
+				27EF952B14FDAAD5003E3367 /* GHUnitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		275B4EB814FD511900EA2661 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275B4EC414FD511900EA2661 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27DF574314FD501400E58F24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27DF575414FD501400E58F24 /* InfoPlist.strings in Resources */,
+				27DF575D14FD501500E58F24 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27DF576314FD501500E58F24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27DF577214FD501500E58F24 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27EF952A14FDAAD5003E3367 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27EF953614FDAAD5003E3367 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		275B4EB914FD511900EA2661 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		27DF576414FD501500E58F24 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		275B4EB614FD511900EA2661 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275B4EC714FD511900EA2661 /* LocationTests.m in Sources */,
+				27DE87F614FD5377005FE50F /* Location.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27DF574114FD501400E58F24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27DF575614FD501400E58F24 /* main.m in Sources */,
+				27DF575A14FD501500E58F24 /* AppDelegate.m in Sources */,
+				27DF576014FD501500E58F24 /* ViewController.m in Sources */,
+				27DE87F514FD5377005FE50F /* Location.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27DF576114FD501500E58F24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27DF577514FD501500E58F24 /* ApplicationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27EF952814FDAAD5003E3367 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27EF953814FDAAD5003E3367 /* main.m in Sources */,
+				27EF954314FDAC8E003E3367 /* LocationTests.m in Sources */,
+				27EF954614FDACC2003E3367 /* Location.m in Sources */,
+				2767A2FB14FEA46D00132B45 /* LocationGHTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2706F31E14FD9F5200B56773 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 275B4EBA14FD511900EA2661 /* LogicTests */;
+			targetProxy = 2706F31D14FD9F5200B56773 /* PBXContainerItemProxy */;
+		};
+		27DF576C14FD501500E58F24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27DF574414FD501400E58F24 /* WhatsMySpeed */;
+			targetProxy = 27DF576B14FD501500E58F24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		275B4EC214FD511900EA2661 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				275B4EC314FD511900EA2661 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		27DF575214FD501400E58F24 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27DF575314FD501400E58F24 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		27DF575B14FD501500E58F24 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27DF575C14FD501500E58F24 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		27DF577014FD501500E58F24 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27DF577114FD501500E58F24 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		27EF953414FDAAD5003E3367 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27EF953514FDAAD5003E3367 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		275B4EC914FD511900EA2661 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LogicTests/LogicTests-Prefix.pch";
+				INFOPLIST_FILE = "LogicTests/LogicTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		275B4ECA14FD511900EA2661 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LogicTests/LogicTests-Prefix.pch";
+				INFOPLIST_FILE = "LogicTests/LogicTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		27DF577614FD501500E58F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = (
+					"-ftest-coverage",
+					"-fprofile-arcs",
+				);
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		27DF577714FD501500E58F24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = (
+					"-ftest-coverage",
+					"-fprofile-arcs",
+				);
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27DF577914FD501500E58F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WhatsMySpeed/WhatsMySpeed-Prefix.pch";
+				INFOPLIST_FILE = "WhatsMySpeed/WhatsMySpeed-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		27DF577A14FD501500E58F24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WhatsMySpeed/WhatsMySpeed-Prefix.pch";
+				INFOPLIST_FILE = "WhatsMySpeed/WhatsMySpeed-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		27DF577C14FD501500E58F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WhatsMySpeed.app/WhatsMySpeed";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WhatsMySpeed/WhatsMySpeed-Prefix.pch";
+				INFOPLIST_FILE = "WhatsMySpeedTests/WhatsMySpeedTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		27DF577D14FD501500E58F24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WhatsMySpeed.app/WhatsMySpeed";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WhatsMySpeed/WhatsMySpeed-Prefix.pch";
+				INFOPLIST_FILE = "WhatsMySpeedTests/WhatsMySpeedTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		27EF953D14FDAAD5003E3367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GHUnitTests/GHUnitTests-Prefix.pch";
+				INFOPLIST_FILE = "GHUnitTests/GHUnitTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../..\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		27EF953E14FDAAD5003E3367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GHUnitTests/GHUnitTests-Prefix.pch";
+				INFOPLIST_FILE = "GHUnitTests/GHUnitTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../..\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		275B4ECB14FD511900EA2661 /* Build configuration list for PBXNativeTarget "LogicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				275B4EC914FD511900EA2661 /* Debug */,
+				275B4ECA14FD511900EA2661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27DF573F14FD501400E58F24 /* Build configuration list for PBXProject "WhatsMySpeed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27DF577614FD501500E58F24 /* Debug */,
+				27DF577714FD501500E58F24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27DF577814FD501500E58F24 /* Build configuration list for PBXNativeTarget "WhatsMySpeed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27DF577914FD501500E58F24 /* Debug */,
+				27DF577A14FD501500E58F24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27DF577B14FD501500E58F24 /* Build configuration list for PBXNativeTarget "WhatsMySpeedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27DF577C14FD501500E58F24 /* Debug */,
+				27DF577D14FD501500E58F24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27EF953F14FDAAD5003E3367 /* Build configuration list for PBXNativeTarget "GHUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27EF953D14FDAAD5003E3367 /* Debug */,
+				27EF953E14FDAAD5003E3367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27DF573C14FD501400E58F24 /* Project object */;
+}
