@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D40A22615C68F59009BA90C /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D40A22515C68F59009BA90C /* libprofile_rt.dylib */; };
 		5D98FAA515A42B8400F17536 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B95349F1557DD3000E081FC /* UIKit.framework */; };
 		5D98FAA615A42B8400F17536 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9534A11557DD3000E081FC /* Foundation.framework */; };
 		5D98FAA715A42B8400F17536 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9534A31557DD3000E081FC /* CoreGraphics.framework */; };
@@ -213,6 +212,7 @@
 		8B9A7C151562557E00D4F416 /* WiFiSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9A7C141562557E00D4F416 /* WiFiSearchBar.m */; };
 		8BD4FF9A156CF20A00B2DFFD /* WiFiFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD4FF98156CF20A00B2DFFD /* WiFiFavoriteViewController.m */; };
 		8BD4FF9B156CF20A00B2DFFD /* WiFiFavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BD4FF99156CF20A00B2DFFD /* WiFiFavoriteViewController.xib */; };
+		AC49E5C915D8F18500480FBB /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC49E5C815D8F18500480FBB /* libprofile_rt.dylib */; };
 		B3051BEB156F5E9700D721B4 /* WiFiJSONDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B3051BD5156F5E9700D721B4 /* WiFiJSONDataModel.m */; };
 		B3051BEC156F5E9700D721B4 /* WiFiProductCompaniesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3051BD7156F5E9700D721B4 /* WiFiProductCompaniesViewController.m */; };
 		B3051BED156F5E9700D721B4 /* WiFiProductCompaniesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3051BD8156F5E9700D721B4 /* WiFiProductCompaniesViewController.xib */; };
@@ -238,7 +238,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5D40A22515C68F59009BA90C /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = ../../Desktop/libprofile_rt.dylib; sourceTree = "<group>"; };
 		5D98FAA315A42B8400F17536 /* WiFiGHUnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiFiGHUnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D98FAAA15A42B8400F17536 /* WiFiGHUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WiFiGHUnitTests-Info.plist"; sourceTree = "<group>"; };
 		5D98FAAC15A42B8400F17536 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -406,6 +405,7 @@
 		8BD4FF97156CF20A00B2DFFD /* WiFiFavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WiFiFavoriteViewController.h; sourceTree = "<group>"; };
 		8BD4FF98156CF20A00B2DFFD /* WiFiFavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WiFiFavoriteViewController.m; sourceTree = "<group>"; };
 		8BD4FF99156CF20A00B2DFFD /* WiFiFavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WiFiFavoriteViewController.xib; sourceTree = "<group>"; };
+		AC49E5C815D8F18500480FBB /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = ../../../../../libprofile_rt.dylib; sourceTree = "<group>"; };
 		B3051BD4156F5E9700D721B4 /* WiFiJSONDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WiFiJSONDataModel.h; path = "../Certified Products/WiFiJSONDataModel.h"; sourceTree = "<group>"; };
 		B3051BD5156F5E9700D721B4 /* WiFiJSONDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WiFiJSONDataModel.m; path = "../Certified Products/WiFiJSONDataModel.m"; sourceTree = "<group>"; };
 		B3051BD6156F5E9700D721B4 /* WiFiProductCompaniesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WiFiProductCompaniesViewController.h; sourceTree = "<group>"; };
@@ -453,13 +453,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC49E5C915D8F18500480FBB /* libprofile_rt.dylib in Frameworks */,
 				5D98FAA515A42B8400F17536 /* UIKit.framework in Frameworks */,
 				5D98FABF15A444DB00F17536 /* GHUnitIOS.framework in Frameworks */,
 				5D98FAA615A42B8400F17536 /* Foundation.framework in Frameworks */,
 				5D98FAA715A42B8400F17536 /* CoreGraphics.framework in Frameworks */,
 				5DC8C02515A4476D00009F49 /* CoreData.framework in Frameworks */,
 				5DC8C02615A4477000009F49 /* MessageUI.framework in Frameworks */,
-				5D40A22615C68F59009BA90C /* libprofile_rt.dylib in Frameworks */,
 				5DC8C02715A4477300009F49 /* Twitter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,10 +695,10 @@
 		8B9534901557DD2F00E081FC = {
 			isa = PBXGroup;
 			children = (
+				AC49E5C815D8F18500480FBB /* libprofile_rt.dylib */,
 				5DE440E915C7F8D20079D778 /* Makefile */,
 				5DE440E415C7F4570079D778 /* RunIPhoneSecurityd.sh */,
 				5DE440E515C7F4570079D778 /* RunTests.sh */,
-				5D40A22515C68F59009BA90C /* libprofile_rt.dylib */,
 				5DC9F75E15A5B03500DC7ABD /* Libraries */,
 				8B9534A51557DD3000E081FC /* Wi-Fi_IOS */,
 				8B9534BC1557E00C00E081FC /* Resources */,
@@ -1353,6 +1353,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Desktop\"",
+					"\"$(SRCROOT)/../../../../..\"",
 				);
 				New_Setting = "";
 				OTHER_CFLAGS = (
@@ -1386,6 +1387,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Desktop\"",
+					"\"$(SRCROOT)/../../../../..\"",
 				);
 				New_Setting = "";
 				OTHER_CFLAGS = (
