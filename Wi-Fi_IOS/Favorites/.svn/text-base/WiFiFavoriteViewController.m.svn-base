@@ -1,0 +1,176 @@
+//
+//  SearchViewController.m
+//  Wi-Fi_IOS
+//
+//  Created by Pavan Paruchuri on 5/14/12.
+//  Copyright (c) 2012 Mutual Mobile. All rights reserved.
+//
+
+#import "WiFiFavoriteViewController.h"
+#import "WiFiArticleListCell.h"
+#import "WiFiArticleListModel.h"
+#import "WiFiArticleDetailViewController.h"
+#import "WiFiFavoriteArticlesModel.h"
+#import "WiFiFavoriteProductsModel.h"
+#import "WiFiProductDetailViewController.h"
+
+@interface WiFiFavoriteViewController (){
+    NSString *favoriteType;
+}
+@end
+
+@implementation WiFiFavoriteViewController
+
+@synthesize favoriteSegmentedControl;
+@synthesize favoriteTableView;
+
+
+@synthesize fetchedResultsController;
+@synthesize fetchedProductsResultsController;
+
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+- (void)viewWillAppear:(BOOL)animated{
+    self.fetchedResultsController   = [WiFiFavoriteArticlesModel MR_fetchAllSortedBy:@"articleUrl" 
+                                                                  ascending:YES 
+                                                              withPredicate:nil
+                                                                    groupBy:nil
+                                                                   delegate:self
+                                                                  inContext:[NSManagedObjectContext MR_contextForCurrentThread]];
+    self.fetchedProductsResultsController   = [WiFiFavoriteProductsModel MR_fetchAllSortedBy:@"certificationId" 
+                                                                  ascending:YES 
+                                                              withPredicate:nil
+                                                                    groupBy:nil
+                                                                   delegate:self
+                                                                  inContext:[NSManagedObjectContext MR_contextForCurrentThread]];
+    
+    [favoriteTableView reloadData];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    favoriteType = @"products";
+    self.title = @"Favorites";
+
+    // Do any additional setup after loading the view from its nib.
+}
+- (IBAction)favoriteSegmentedControlValueChanged:(id)sender{
+    //NSLog(@"Value changed");
+    
+    if ([favoriteSegmentedControl selectedSegmentIndex] == 0) {
+        favoriteType = @"products";
+    }else {
+        favoriteType = @"articles";
+    }
+    [favoriteTableView reloadData];
+}
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([favoriteType isEqualToString:@"articles"]) {
+        return 71;
+    }else {
+        return 40;
+    }
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if ([favoriteType isEqualToString:@"articles"]) {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:section];
+        //NSLog(@"Number of Articles Rows : %i",[sectionInfo numberOfObjects]);
+        return [sectionInfo numberOfObjects];
+    }else {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedProductsResultsController sections] objectAtIndex:section];
+        //NSLog(@"Number of Products Rows : %i",[sectionInfo numberOfObjects]);
+        return [sectionInfo numberOfObjects];
+    }
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    //static NSString *identifier = @"Cell";
+    static NSString *kCellIdentifier    = @"MyIdentifier";
+    
+    if ([favoriteType isEqualToString:@"articles"]) {
+        WiFiArticleListCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"WiFiArticleListCell" owner:self options:nil] objectAtIndex:0];
+        if (cell == nil)
+        {
+            cell = [[[WiFiArticleListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier]autorelease];
+        }
+        
+        [self configureCell:cell atIndexPath:indexPath];
+        return cell;
+    }else {
+        UITableViewCell *cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier] autorelease];
+        if (cell == nil)
+        {
+            cell = [[[WiFiArticleListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier]autorelease];
+        }
+        WiFiFavoriteProductsModel *currentProduct       = [fetchedProductsResultsController objectAtIndexPath:indexPath];
+        cell.textLabel.text = currentProduct.product;
+        [[cell textLabel] setFont:[UIFont fontWithName:@"Futura-Medium" size:15]];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        return cell;
+    }
+}
+
+- (void)configureCell:(WiFiArticleListCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    WiFiFavoriteArticlesModel *currentArticle       = [fetchedResultsController objectAtIndexPath:indexPath];
+    //NSLog(@"configure cell");
+    //NSLog(@"Article Title %i: %@",indexPath.row,currentArticle.articleTitle);
+    cell.titleLabel.text=currentArticle.articleTitle;
+    cell.titleSummaryLabel.text=currentArticle.articleContent;
+    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:currentArticle.articleImageUrl]];
+    cell.tagImageView.image=[[[UIImage alloc] initWithData:imageData] autorelease];
+    [imageData release];
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([favoriteType isEqualToString:@"articles"]) {
+        WiFiFavoriteArticlesModel *currentArticle       = [fetchedResultsController objectAtIndexPath:indexPath];
+        //NSLog(@"%@",currentArticle.articleContent);
+        
+        WiFiArticleDetailViewController *articleDetailViewController=[[WiFiArticleDetailViewController alloc] initWithArticleContent:currentArticle.articleContent articleTitle:currentArticle.articleTitle articleUrl:currentArticle.articleUrl articleImageUrl:currentArticle.articleImageUrl];
+        self.navigationItem.backBarButtonItem =[[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
+        [self.navigationController pushViewController:articleDetailViewController animated:YES];
+        [articleDetailViewController release];
+    }else {
+        WiFiFavoriteProductsModel *currentProduct       = [fetchedProductsResultsController objectAtIndexPath:indexPath];
+
+        WiFiJSONDataModel *data = [[[WiFiJSONDataModel alloc] init] autorelease];
+        data.certificationId = currentProduct.certificationId ;
+        data.company = currentProduct.company;
+        data.product = currentProduct.product;
+        data.model = currentProduct.model;
+        data.certificationUrl = currentProduct.certificationUrl ;
+        data.category = currentProduct.category; 
+        WiFiProductDetailViewController *viewCont = [[[WiFiProductDetailViewController alloc] initWithFinalData:data] autorelease];
+
+        self.navigationItem.backBarButtonItem =[[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
+        [self. navigationController pushViewController:viewCont animated:YES];
+    }
+    
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)dealloc {
+    [favoriteSegmentedControl release];
+    [favoriteTableView release];
+    [super dealloc];
+}
+@end

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11D50b" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="WiFiFavoriteArticlesModel" representedClassName="FavoriteArticles" syncable="YES">
+        <attribute name="articleContent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="articleImageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="articleTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="articleUrl" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="WiFiFavoriteProductsModel" representedClassName="FavoriteProducts" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="certificationId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="certificationUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="model" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="product" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="WiFiFilterDataModel" syncable="YES">
+        <attribute name="idValue" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="WiFiFavoriteArticlesModel" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="WiFiFavoriteProductsModel" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="WiFiFilterDataModel" positionX="160" positionY="192" width="128" height="60"/>
+    </elements>
+</model>

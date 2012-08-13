@@ -1,0 +1,58 @@
+//
+//  WiFiArticleListCell.m
+//  Wi-Fi_IOS
+//
+//  Created by Pavan Paruchuri on 5/10/12.
+//  Copyright (c) 2012 Mutual Mobile. All rights reserved.
+//
+
+#import "WiFiArticleListCell.h"
+
+@implementation WiFiArticleListCell
+
+@synthesize tagImageView;
+@synthesize titleLabel;
+@synthesize titleSummaryLabel;
+
+//- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+//{
+//    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+//    if (self) {
+////        titleLabel =[[UILabel alloc] init];
+////        titleLabel.font = [UIFont systemFontOfSize:13];
+////        titleLabel.textAlignment = UITextAlignmentLeft;
+////        titleSummaryLabel =[[UILabel alloc] init];
+////        titleSummaryLabel.font = [UIFont systemFontOfSize:10];
+////        titleSummaryLabel.textAlignment = UITextAlignmentLeft;
+////        tagImageView =[[UIImageView alloc] init];
+////        [self.contentView addSubview:titleLabel];
+////        [self.contentView addSubview:titleSummaryLabel];
+////        [self.contentView addSubview:tagImageView];
+//    }
+//    return self;
+//}
+
+//- (void)layoutSubviews {
+//    [super layoutSubviews];
+//    CGRect contentRect = self.contentView.bounds;
+//    CGFloat boundsX = contentRect.origin.x;
+//    CGRect frame;
+//    frame= CGRectMake(boundsX+10, 2, 10, 40);
+//    tagImageView.frame = frame;
+//    
+//    frame= CGRectMake(boundsX+10 ,10, 300, 25);
+//    titleLabel.frame = frame;
+//    
+//    frame= CGRectMake(boundsX+50 ,30, 300, 25);
+//    titleSummaryLabel.frame = frame;
+//    
+//}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+@end

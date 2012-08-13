@@ -1,0 +1,136 @@
+//
+//  ArticleListViewController.m
+//  Wi-Fi_IOS
+//
+//  Created by Pavan Paruchuri on 5/9/12.
+//  Copyright (c) 2012 Mutual Mobile. All rights reserved.
+//
+
+#import "WiFiArticleListViewController.h"
+#import "WiFiArticleDetailViewController.h"
+#import "WiFiArticleListCell.h"
+#import "WiFiArticleListModel.h"
+#import "NSString+HTML.h"
+#import "UIImageView+AFNetworking.h"
+
+@interface WiFiArticleListViewController ()
+@end
+
+@implementation WiFiArticleListViewController{
+    WiFiArticleListModel *articleListModel;
+}
+
+@synthesize articleListSearchBar;
+@synthesize activityView_=activityView;
+
+@synthesize articleListUrl;
+@synthesize articleListTableView;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+- (id) initWithArticleListUrl:(NSString *)url articleListTitle:(NSString *)title{
+    
+    articleListUrl=url;
+    //NSLog(@"Article List Url %@",articleListUrl);
+    self.title=title;
+    return self;
+}
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [activityView startAnimating];
+    articleListModel = [[WiFiArticleListModel alloc] initWithArticleListUrl:articleListUrl];
+    articleListModel.delegate=self;
+    [articleListModel startUrlConnection];
+    [articleListTableView reloadData];
+    //NSLog(@"View Did Load");
+    // Do any additional setup after loading the view from its nib.
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    articleListModel.delegate=nil;
+}
+
+- (void)viewDidUnload
+{
+    [self setArticleListTableView:nil];
+    [self setArticleListSearchBar:nil];
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    //NSLog(@"Search Button pressed %@",searchBar.text);
+    [searchBar resignFirstResponder];
+    WiFiSearchViewController *searchViewController= [[WiFiSearchViewController alloc] initWithKeyword:searchBar.text searchType:@"articles"];
+    self.navigationItem.backBarButtonItem =[[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
+    searchViewController.title=@"Search";
+    //[searchViewController setObjects:];
+    [self.navigationController pushViewController:searchViewController animated:YES];
+    [searchViewController release];
+}
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    if ([searchText length] == 0) {
+        [self performSelector:@selector(hideKeyboardWithSearchBar:) withObject:searchBar afterDelay:0];
+    }
+}
+
+- (void)hideKeyboardWithSearchBar:(UISearchBar *)searchBar
+{   
+    [searchBar resignFirstResponder];   
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 71;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return articleListModel.articleTitles.count-1;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    //static NSString *identifier = @"Cell";
+    WiFiArticleListCell *cell = nil;
+    
+    if(cell == nil)
+    {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"WiFiArticleListCell" owner:self options:nil] objectAtIndex:0];
+    //NSLog(@"Articles image url at index %@",[articleListUrl objectAtIndex:indexPath.row]);
+    cell.titleLabel.text=[articleListModel.articleTitles objectAtIndex:indexPath.row];
+    cell.titleSummaryLabel.text=[articleListModel.articleSummaries objectAtIndex:indexPath.row];
+//    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:[articleListModel.articleImageUrl objectAtIndex:indexPath.row]]];
+
+        [cell.tagImageView setImageWithURL:[NSURL URLWithString:[articleListModel.articleImageUrl objectAtIndex:indexPath.row]]];//=[[[UIImage alloc] initWithData:imageData] autorelease];
+    //[imageData release];
+    }
+    return cell;
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    WiFiArticleDetailViewController *articleDetailViewController=[[WiFiArticleDetailViewController alloc] initWithArticleContent:[articleListModel.articleContent objectAtIndex:indexPath.row] articleTitle:[articleListModel.articleTitles objectAtIndex:indexPath.row] articleUrl:[articleListModel.articleLinks objectAtIndex:indexPath.row] articleImageUrl:[articleListModel.articleImageUrl objectAtIndex:indexPath.row]];
+    self.navigationItem.backBarButtonItem =[[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
+    [self.navigationController pushViewController:articleDetailViewController animated:YES];
+    [articleDetailViewController release];
+}
+
+- (void) reloadTableView{
+    [articleListTableView reloadData];
+    [activityView stopAnimating];
+}
+
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)dealloc {
+    [articleListTableView release];
+    [articleListSearchBar release];
+    [super dealloc];
+}
+@end
